@@ -1,11 +1,11 @@
 # Docker
 Erpnext install by Docker
 
-Step 2 — SSH se Connect Karo
-bashssh -i /path/to/yourkey.pem ubuntu@<EC2-PUBLIC-IP>
+# Step 2 — SSH se Connect Karo
+ssh -i /path/to/yourkey.pem ubuntu@<EC2-PUBLIC-IP>
 
 Step 3 — Docker Install Karo
-bash# System update
+# System update
 sudo apt update && sudo apt upgrade -y
 
 # Docker install karo (official script se)
@@ -24,7 +24,7 @@ docker --version
 docker compose version
 
 Step 4 — ERPNext Docker Repo Clone Karo
-bash# Git install
+# Git install
 sudo apt install git -y
 
 # Frappe Docker repo clone karo
@@ -32,7 +32,7 @@ git clone https://github.com/frappe/frappe_docker.git
 cd frappe_docker
 
 Step 5 — Environment File Configure Karo
-bash# Example env file copy karo
+# Example env file copy karo
 cp example.env .env
 
 # .env file edit karo
@@ -44,7 +44,7 @@ SITE_NAME=mysite.localhost
 INSTALL_APPS=erpnext
 
 Step 6 — Containers Start Karo
-bash# Sab containers ek saath start karo
+# Sab containers ek saath start karo
 docker compose -f compose.yaml \
   -f overrides/compose.mariadb.yaml \
   -f overrides/compose.redis.yaml \
