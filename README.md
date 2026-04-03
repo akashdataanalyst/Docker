@@ -69,6 +69,23 @@ docker compose exec backend \
 
 ## Step 7 — Access Karo
 
+## agar nahi chala toh
+
+nano compose.yaml
+
+frontend:
+  <<: *customizable_image
+  platform: linux/amd64
+  ports:
+    - "80:8080"
+  command:
+    - nginx-entrypoint.sh
+
+ctrl+x ,y ,Enter
+
+
+
+
 Browser mein jaao aur type karo:
 ```
 http://<EC2-PUBLIC-IP>
