@@ -84,6 +84,15 @@ frontend:
 ctrl+x ,y ,Enter
 
 
+#step 8
+docker compose down
+docker compose up -d
+
+# Step9
+docker compose ps
+Output 0.0.0.0:80->8080/tcp ✅ like this
+
+http://13.127.59.53
 
 
 Browser mein jaao aur type karo:
